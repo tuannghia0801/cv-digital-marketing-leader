@@ -393,6 +393,33 @@ html[lang="en"] .lang-vi {
     color: var(--primary);
     animation: blink 0.8s infinite;
 }
+.print-subtitle {
+    display: none !important;
+}
+
+.hero-website-wrapper {
+    margin-top: -5px;
+    margin-bottom: 16px;
+}
+.hero-website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition);
+    padding: 6px 14px;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--primary-rgba);
+    border: 1px solid rgba(20, 184, 166, 0.15);
+}
+.hero-website-link:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--primary-rgba);
+}
 
 .hero-desc {
     color: var(--text-secondary);
@@ -1050,7 +1077,7 @@ html[lang="en"] .lang-vi {
 }
 .contact-methods-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     width: 100%;
 }
@@ -1269,6 +1296,9 @@ html[lang="en"] .lang-vi {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .contact-methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1358,7 +1388,19 @@ html[lang="en"] .lang-vi {
    PRINT STYLES: OPTIMIZED FOR A4 PDF EXPORT
    ========================================================================== */
 @media print {
-    /* Hide non-resume interactive elements */
+    :root {
+        --primary: #4f46e5 !important;
+        --accent: #0d9488 !important;
+        --primary-rgba: rgba(79, 70, 229, 0.08) !important;
+    }
+
+    /* Force exact colors in printing (backgrounds, text gradients, borders) */
+    *, *::before, *::after {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Hide non-resume interactive elements & redundant hero description in print */
     .navbar, 
     .nav-actions,
     .mobile-nav, 
@@ -1370,8 +1412,20 @@ html[lang="en"] .lang-vi {
     .contact-form-block,
     .footer, 
     .divider,
-    .section-subtitle {
+    .section-subtitle,
+    .hero-desc {
         display: none !important;
+    }
+
+    /* Reset scroll-reveal and other animations for print */
+    .scroll-reveal,
+    .animate-left,
+    .animate-right,
+    .animate-bottom {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
     }
 
     /* Reset global page styles for white paper */
@@ -1399,36 +1453,87 @@ html[lang="en"] .lang-vi {
         margin-bottom: 22px !important;
         background-color: transparent !important;
         border: none !important;
-        page-break-inside: avoid;
     }
 
-    /* Hero Print Styling */
+    /* Prevent breaking cards across page boundaries */
+    .edu-card,
+    .cert-card,
+    .skill-category-card,
+    .method-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* Hero Print Styling: Side-by-side flex layout to prevent text squishing */
     .hero-section {
         padding: 0 !important;
         margin-bottom: 25px !important;
-        border-bottom: 2px solid #0b0f19 !important;
+        border-bottom: 2px solid var(--primary) !important;
         padding-bottom: 15px !important;
     }
     .hero-grid {
-        display: grid !important;
-        grid-template-columns: 3.5fr 1fr !important;
-        gap: 20px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 24px !important;
+    }
+    .hero-info {
+        flex: 1 !important;
+        order: 1 !important;
+    }
+    .hero-visual {
+        flex-shrink: 0 !important;
+        order: 2 !important;
     }
     .hero-title {
         font-size: 22pt !important;
         margin-bottom: 4px !important;
-        color: #0b0f19 !important;
+        color: var(--primary) !important;
     }
-    .hero-title span {
+    .hero-title span.text-gradient {
         background: none !important;
-        -webkit-text-fill-color: initial !important;
-        color: #0b0f19 !important;
+        -webkit-text-fill-color: var(--primary) !important;
+        color: var(--primary) !important;
+        font-weight: 800 !important;
     }
     .hero-subtitle {
         font-size: 13pt !important;
         margin-bottom: 8px !important;
-        color: #475569 !important;
+        color: var(--accent) !important;
         min-height: auto !important;
+    }
+    #typing-text, .cursor {
+        display: none !important;
+    }
+    .print-subtitle {
+        display: none !important;
+    }
+    html[lang="vi"] .print-subtitle.lang-vi {
+        display: inline !important;
+    }
+    html[lang="en"] .print-subtitle.lang-en {
+        display: inline !important;
+    }
+    .hero-website-wrapper {
+        margin-top: 4px !important;
+        margin-bottom: 0 !important;
+    }
+    .hero-website-link {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        color: var(--primary) !important;
+        font-size: 10.5pt !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+    .hero-website-link i {
+        color: var(--accent) !important;
+        font-size: 10pt !important;
     }
     .hero-desc {
         font-size: 9.5pt !important;
@@ -1446,8 +1551,7 @@ html[lang="en"] .lang-vi {
     .profile-img {
         width: 100px !important;
         height: 100px !important;
-        border: 2px solid #e2e8f0 !important;
-        filter: grayscale(1) !important;
+        border: 2px solid var(--primary) !important;
         border-radius: 6px !important;
     }
 
@@ -1464,10 +1568,10 @@ html[lang="en"] .lang-vi {
     .section-title {
         font-size: 13pt !important;
         text-transform: uppercase !important;
-        border-bottom: 1.5px solid #0b0f19 !important;
+        border-bottom: 2px solid var(--primary) !important;
         padding-bottom: 4px !important;
         margin-top: 0 !important;
-        color: #0b0f19 !important;
+        color: var(--primary) !important;
     }
 
     /* About section print */
@@ -1498,7 +1602,7 @@ html[lang="en"] .lang-vi {
         display: none !important; /* Hide career summary timeline in print to fit A4 */
     }
 
-    /* Skills print - 2 Columns list instead of cards */
+    /* Skills print - 2 Columns of colored badges */
     .skills-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
@@ -1527,21 +1631,23 @@ html[lang="en"] .lang-vi {
         gap: 6px !important;
     }
     .skill-badge {
-        background-color: transparent !important;
-        border: none !important;
-        padding: 0 !important;
-        font-size: 8.5pt !important;
-        color: #0b0f19 !important;
-        font-weight: 500 !important;
+        background-color: var(--primary-rgba) !important;
+        border: 1px solid rgba(99, 102, 241, 0.2) !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
+        font-size: 8pt !important;
+        color: var(--primary) !important;
+        font-weight: 600 !important;
+        display: inline-block !important;
     }
     .skill-badge i {
-        display: none !important;
+        display: inline-block !important;
+        margin-right: 4px !important;
+        color: var(--primary) !important;
+        font-size: 8.5pt !important;
     }
     .skill-badge::after {
-        content: ", ";
-    }
-    .skill-badge:last-child::after {
-        content: "";
+        content: "" !important;
     }
 
     /* Timeline Print Styling */
@@ -1554,7 +1660,8 @@ html[lang="en"] .lang-vi {
     .timeline-item {
         padding-left: 0 !important;
         margin-bottom: 15px !important;
-        page-break-inside: avoid;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
     .timeline-dot {
         display: none !important;
@@ -1563,7 +1670,7 @@ html[lang="en"] .lang-vi {
         font-size: 9.5pt !important;
         font-weight: 700 !important;
         margin-bottom: 4px !important;
-        color: #475569 !important;
+        color: var(--primary) !important;
     }
     .timeline-content {
         background-color: transparent !important;
@@ -1609,7 +1716,7 @@ html[lang="en"] .lang-vi {
         padding-left: 15px !important;
     }
     .job-details strong {
-        color: #0b0f19 !important;
+        color: var(--accent) !important;
         font-weight: 700 !important;
     }
 
@@ -1626,6 +1733,12 @@ html[lang="en"] .lang-vi {
         box-shadow: none !important;
         margin-bottom: 12px !important;
     }
+    .edu-year {
+        color: var(--primary) !important;
+        font-weight: 700 !important;
+        font-size: 9.5pt !important;
+        margin-bottom: 4px !important;
+    }
     .edu-degree {
         font-size: 10pt !important;
         font-weight: 700 !important;
@@ -1636,7 +1749,8 @@ html[lang="en"] .lang-vi {
     }
     .edu-gpa {
         font-size: 8.5pt !important;
-        color: #475569 !important;
+        color: var(--accent) !important;
+        font-weight: 700 !important;
     }
     .cert-grid {
         gap: 8px !important;
@@ -1649,7 +1763,10 @@ html[lang="en"] .lang-vi {
         gap: 8px !important;
     }
     .cert-brand-icon {
-        display: none !important; /* Hide brand icons in print */
+        display: inline-block !important;
+        font-size: 14pt !important;
+        width: 24px !important;
+        text-align: center;
     }
     .cert-name {
         font-size: 9.5pt !important;
@@ -1675,8 +1792,9 @@ html[lang="en"] .lang-vi {
         font-size: 11pt !important;
         text-align: left !important;
         margin-bottom: 8px !important;
+        color: var(--primary) !important;
     }
-    .contact-info-center p {
+    .contact-info-center > p {
         display: none !important;
     }
     .contact-methods-grid {
@@ -1697,9 +1815,12 @@ html[lang="en"] .lang-vi {
     }
     .method-card span {
         font-size: 7.5pt !important;
+        color: var(--primary) !important;
+        font-weight: 700 !important;
     }
     .method-card p {
         font-size: 9pt !important;
         color: #0b0f19 !important;
+        font-weight: 600 !important;
     }
 }
