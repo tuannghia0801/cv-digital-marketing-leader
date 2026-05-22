@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Tuấn Nghĩa | Digital Marketing Leader Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                NghiaLT<span class="dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link active" data-en="About" data-vi="Giới thiệu">Giới thiệu</a>
+                <a href="#skills" class="nav-link" data-en="Skills" data-vi="Kỹ năng">Kỹ năng</a>
+                <a href="#experience" class="nav-link" data-en="Experience" data-vi="Kinh nghiệm">Kinh nghiệm</a>
+                <a href="#projects" class="nav-link" data-en="Projects" data-vi="Dự án">Dự án</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-vi="Liên hệ">Liên hệ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-icon" aria-label="Switch Language">
+                    <span class="lang-text lang-vi">VI</span>
+                    <span class="lang-text lang-en">EN</span>
+                </button>
+                
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <!-- CV Print/Download Button -->
+                <button id="download-cv" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-download"></i>
+                    <span class="lang-vi">Tải CV</span>
+                    <span class="lang-en">Download CV</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Open Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav">
+        <a href="#about" class="mobile-link" data-en="About" data-vi="Giới thiệu">Giới thiệu</a>
+        <a href="#skills" class="mobile-link" data-en="Skills" data-vi="Kỹ năng">Kỹ năng</a>
+        <a href="#experience" class="mobile-link" data-en="Experience" data-vi="Kinh nghiệm">Kinh nghiệm</a>
+        <a href="#projects" class="mobile-link" data-en="Projects" data-vi="Dự án">Dự án</a>
+        <a href="#contact" class="mobile-link" data-en="Contact" data-vi="Liên hệ">Liên hệ</a>
+    </div>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="grid-container hero-grid">
+                <div class="hero-info animate-left">
+                    <span class="welcome-badge">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span class="lang-vi">Chào mừng đến với Portfolio của tôi</span>
+                        <span class="lang-en">Welcome to my Professional Portfolio</span>
+                    </span>
+                    <h1 class="hero-title">
+                        <span class="lang-vi">Tôi là </span><span class="lang-en">I am </span>
+                        <span class="text-gradient">Lê Tuấn Nghĩa</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span id="typing-text"></span><span class="cursor">|</span>
+                    </h2>
+                    
+                    <p class="hero-desc lang-vi">
+                        5+ năm kinh nghiệm Digital Marketing đa kênh, từng quản lý ngân sách tới 4 tỷ VNĐ/tháng. Trọng tâm cốt lõi là ứng dụng Automation/AI và tối ưu hóa nguồn lực đội ngũ nhằm tối đa hóa hiệu suất quảng cáo & tăng trưởng doanh thu.
+                    </p>
+                    <p class="hero-desc lang-en">
+                        5+ years of multichannel Digital Marketing experience, managing budgets up to 4B VND/month. Core focus on Automation/AI integration and team resource optimization to maximize performance and growth.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <span class="lang-vi">Liên hệ hợp tác</span>
+                            <span class="lang-en">Let's Connect</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#experience" class="btn btn-secondary">
+                            <span class="lang-vi">Xem kinh nghiệm</span>
+                            <span class="lang-en">View Experience</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:nghialt0801@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="tel:0971393894" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://github.com" target="_blank" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual animate-right">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-ring"></div>
+                        <!-- Profile Image -->
+                        <img src="assets/profile.png" alt="Le Tuan Nghia Portrait" class="profile-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter Dashboard -->
+            <div class="stats-container animate-bottom">
+                <div class="stat-card">
+                    <h3 class="stat-num">13M+</h3>
+                    <p class="stat-label lang-vi">Traffic Hàng Tháng</p>
+                    <p class="stat-label lang-en">Monthly Web Traffic</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-num">70x</h3>
+                    <p class="stat-label lang-vi">ROAS Đạt Tới</p>
+                    <p class="stat-label lang-en">Max ROAS Achieved</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-num">-20%</h3>
+                    <p class="stat-label lang-vi">CPA Cắt Giảm</p>
+                    <p class="stat-label lang-en">CPA Reduction</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-num">4B+</h3>
+                    <p class="stat-label lang-vi">Ngân Sách/Tháng (VNĐ)</p>
+                    <p class="stat-label lang-en">Monthly Budget Managed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-num">30%</h3>
+                    <p class="stat-label lang-vi">Tăng Trưởng NPI (YoY)</p>
+                    <p class="stat-label lang-en">NPI YoY Growth</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle" data-en="Introduction" data-vi="Giới thiệu sơ lược">Giới thiệu sơ lược</span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Về Bản Thân tôi</span>
+                    <span class="lang-en">About Me</span>
+                </h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-container about-grid">
+                <div class="about-content">
+                    <h3 class="about-lead lang-vi">
+                        Tích hợp tiếp thị hiệu suất (Performance Marketing) với công nghệ Tự động hóa và Trí tuệ nhân tạo.
+                    </h3>
+                    <h3 class="about-lead lang-en">
+                        Integrating Performance Marketing with Automation and Artificial Intelligence.
+                    </h3>
+                    <p class="lang-vi">
+                        Tôi là Lê Tuấn Nghĩa, một Digital Marketing Leader với hành trình hơn 5 năm thực chiến xây dựng, vận hành và quản trị các chiến dịch Marketing đa kênh. Điểm khác biệt cốt lõi của tôi nằm ở khả năng ứng dụng các công cụ Automation và AI (như Insider, n8n, Gemini, Claude Code) vào phễu tiếp thị số nhằm tinh giản nguồn lực và nâng cao chất lượng chuyển đổi. Tôi luôn hướng đến mục tiêu đồng hành cùng các doanh nghiệp xây dựng những động cơ tăng trưởng mạnh mẽ, bền vững và tối ưu chi phí.
+                    </p>
+                    <p class="lang-en">
+                        I am Le Tuan Nghia, a Digital Marketing Leader with over 5 years of hands-on experience building, executing, and managing multi-channel campaigns. My core differentiator lies in applying Automation and AI solutions (such as Insider, n8n, Gemini, Claude Code) to digital marketing funnels to streamline resources and elevate conversion quality. I aim to partner with enterprises to develop robust, sustainable, and cost-efficient growth engines.
+                    </p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope info-icon"></i>
+                            <div>
+                                <span class="info-title lang-vi">Email trực tiếp</span>
+                                <span class="info-title lang-en">Direct Email</span>
+                                <p class="info-value">nghialt0801@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone info-icon"></i>
+                            <div>
+                                <span class="info-title lang-vi">Số điện thoại</span>
+                                <span class="info-title lang-en">Phone Number</span>
+                                <p class="info-value">0971 393 894</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot info-icon"></i>
+                            <div>
+                                <span class="info-title lang-vi">Khu vực làm việc</span>
+                                <span class="info-title lang-en">Location</span>
+                                <p class="info-value">Hà Nội, Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-briefcase info-icon"></i>
+                            <div>
+                                <span class="info-title lang-vi">Trạng thái</span>
+                                <span class="info-title lang-en">Availability</span>
+                                <p class="info-value lang-vi">Sẵn sàng đồng hành cùng DN</p>
+                                <p class="info-value lang-en">Ready for Leader roles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="card-heading lang-vi"><i class="fa-solid fa-compass"></i> Tóm tắt định hướng</h3>
+                    <h3 class="card-heading lang-en"><i class="fa-solid fa-compass"></i> Career Focus</h3>
+                    
+                    <div class="timeline-small">
+                        <div class="timeline-small-item">
+                            <div class="timeline-small-marker"></div>
+                            <div class="timeline-small-content">
+                                <h4 class="lang-vi">Ứng dụng MarTech & AI tối tân</h4>
+                                <h4 class="lang-en">Leveraging MarTech & AI</h4>
+                                <p class="lang-vi">Đi đầu trong việc tích hợp n8n, AI Agent và các hệ thống phân khúc dữ liệu tự động để giảm tải thao tác lặp lại cho đội ngũ, tăng tốc độ phản hồi thị trường.</p>
+                                <p class="lang-en">Leading the integration of n8n, AI agents, and automated data segmentation engines to reduce manual workload and accelerate market response times.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-small-item">
+                            <div class="timeline-small-marker"></div>
+                            <div class="timeline-small-content">
+                                <h4 class="lang-vi">Phát triển DN bền vững</h4>
+                                <h4 class="lang-en">Sustainable Growth</h4>
+                                <p class="lang-vi">Xây dựng chiến lược tiếp thị đa kênh vững chắc, phối hợp nhịp nhàng giữa Performance, SEO và Content để duy trì dòng traffic & lượng khách hàng tiềm năng tăng trưởng ổn định.</p>
+                                <p class="lang-en">Building sound multi-channel strategies, aligning Performance, SEO, and Content to sustain a steady stream of traffic and incoming qualified leads.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle" data-en="Competencies" data-vi="Kỹ năng & Công cụ">Kỹ năng & Công cụ</span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Năng Lực & Hệ Sinh Thái</span>
+                    <span class="lang-en">Skills & Toolkit</span>
+                </h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-container skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon-wrapper"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div>
+                            <h3 class="lang-vi">Kênh Quảng Cáo (Paid Ads)</h3>
+                            <h3 class="lang-en">Paid Ad Channels</h3>
+                        </div>
+                    </div>
+                    <div class="skill-badges-container">
+                        <div class="skill-badge"><i class="fa-brands fa-google"></i> Google Ads</div>
+                        <div class="skill-badge"><i class="fa-brands fa-meta"></i> Meta (Facebook) Ads</div>
+                        <div class="skill-badge"><i class="fa-brands fa-tiktok"></i> TikTok Ads</div>
+                        <div class="skill-badge"><i class="fa-solid fa-message"></i> Zalo Ads</div>
+                        <div class="skill-badge"><i class="fa-solid fa-compass"></i> Cốc Cốc Ads</div>
+                        <div class="skill-badge"><i class="fa-solid fa-chart-column"></i> Criteo</div>
+                        <div class="skill-badge"><i class="fa-solid fa-server"></i> RTB House</div>
+                        <div class="skill-badge"><i class="fa-solid fa-envelope-open-text"></i> Email Marketing</div>
+                        <div class="skill-badge"><i class="fa-solid fa-share-nodes"></i> Affiliate Marketing</div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon-wrapper"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div>
+                            <h3 class="lang-vi">Phân Tích Dữ Liệu</h3>
+                            <h3 class="lang-en">Data & Analytics</h3>
+                        </div>
+                    </div>
+                    <div class="skill-badges-container">
+                        <div class="skill-badge"><i class="fa-solid fa-chart-line"></i> Google Analytics 4 (GA4)</div>
+                        <div class="skill-badge"><i class="fa-solid fa-tags"></i> Google Tag Manager (GTM)</div>
+                        <div class="skill-badge"><i class="fa-brands fa-meta"></i> Meta Ads Manager</div>
+                        <div class="skill-badge"><i class="fa-solid fa-chart-column"></i> Looker Studio</div>
+                        <div class="skill-badge"><i class="fa-solid fa-chart-bar"></i> Power BI</div>
+                        <div class="skill-badge"><i class="fa-solid fa-network-wired"></i> Lark Suite</div>
+                        <div class="skill-badge"><i class="fa-solid fa-file-excel"></i> Google Sheets / Excel</div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon-wrapper"><i class="fa-solid fa-robot"></i></div>
+                        <div>
+                            <h3 class="lang-vi">Tự Động Hóa & Trí Tuệ Nhân Tạo</h3>
+                            <h3 class="lang-en">Automation & AI</h3>
+                        </div>
+                    </div>
+                    <div class="skill-badges-container">
+                        <div class="skill-badge"><i class="fa-solid fa-user-gear"></i> Insider (CDP/Personalization)</div>
+                        <div class="skill-badge"><i class="fa-solid fa-code-branch"></i> n8n (Workflow Automation)</div>
+                        <div class="skill-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> ChatGPT</div>
+                        <div class="skill-badge"><i class="fa-solid fa-robot"></i> Google Gemini</div>
+                        <div class="skill-badge"><i class="fa-solid fa-brain"></i> Claude Code</div>
+                        <div class="skill-badge"><i class="fa-solid fa-circle-nodes"></i> Antigravity Agent</div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon-wrapper"><i class="fa-solid fa-chess"></i></div>
+                        <div>
+                            <h3 class="lang-vi">Quản Lý & Lãnh Đạo</h3>
+                            <h3 class="lang-en">Management & Leadership</h3>
+                        </div>
+                    </div>
+                    <div class="skill-badges-container">
+                        <div class="skill-badge"><i class="fa-solid fa-users"></i> Quản lý & dẫn dắt Team</div>
+                        <div class="skill-badge"><i class="fa-solid fa-chalkboard-user"></i> Đào tạo nhân sự</div>
+                        <div class="skill-badge"><i class="fa-solid fa-chess"></i> Lập kế hoạch chiến lược</div>
+                        <div class="skill-badge"><i class="fa-solid fa-bullhorn"></i> Quản lý chiến dịch tích hợp</div>
+                        <div class="skill-badge"><i class="fa-solid fa-handshake"></i> Phối hợp đa phòng ban</div>
+                        <div class="skill-badge"><i class="fa-solid fa-wallet"></i> Quản lý ngân sách lớn</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="experience-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle" data-en="Career Path" data-vi="Hành trình sự nghiệp">Hành trình sự nghiệp</span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Kinh Nghiệm & Thành Tích</span>
+                    <span class="lang-en">Experience & Achievements</span>
+                </h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2026</div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title lang-vi">Digital Marketing Leader</h3>
+                                <h3 class="job-title lang-en">Digital Marketing Leader</h3>
+                                <h4 class="job-company"><i class="fa-solid fa-building"></i> Hoàng Hà Mobile</h4>
+                            </div>
+                            <span class="job-badge lang-vi">Toàn thời gian</span>
+                            <span class="job-badge lang-en">Full-time</span>
+                        </div>
+                        <ul class="job-details">
+                            <li class="lang-vi">Quản lý và tối ưu ngân sách quảng cáo lên tới <strong>4 tỷ VNĐ/tháng</strong> trên các kênh Google Ads, Meta, TikTok, Criteo, RTB House, Zalo và Cốc Cốc — đạt tỷ suất ROAS tối đa tới <strong>70x</strong>.</li>
+                            <li class="lang-en">Managed and optimized ad budgets up to <strong>4B VND/month</strong> across Google, Meta, TikTok, Criteo, RTB House, Zalo, and Coc Coc Ads — achieving peak ROAS up to <strong>70x</strong>.</li>
+                            
+                            <li class="lang-vi">Đạt mốc <strong>13 triệu+ lượt traffic/tháng</strong> thông qua các chiến dịch tích hợp đồng bộ trên sàn TMĐT, website và chuỗi cửa hàng bán lẻ vật lý.</li>
+                            <li class="lang-en">Generated <strong>13M+ monthly traffic</strong> through integrated omni-channel campaigns across e-commerce, website, and retail stores.</li>
+                            
+                            <li class="lang-vi"><strong>Giảm CPA 20%</strong> nhờ liên tục thử nghiệm A/B, tinh chỉnh phân khúc đối tượng và phân bổ lại ngân sách dựa trên hiệu suất thời gian thực.</li>
+                            <li class="lang-en"><strong>Reduced CPA by 20%</strong> through persistent A/B testing, audience refinement, and real-time performance budget re-allocation.</li>
+
+                            <li class="lang-vi">Dẫn dắt <strong>3 mùa ra mắt sản phẩm Apple NPI</strong> thành công liên tiếp, đạt tăng trưởng doanh số ấn tượng lên tới <strong>30% YoY</strong>.</li>
+                            <li class="lang-en">Led <strong>3 consecutive successful Apple NPI launches</strong>, securing revenue growth of up to <strong>30% YoY</strong>.</li>
+
+                            <li class="lang-vi">Chủ động ứng dụng các giải pháp tự động hóa phễu tiếp thị (Insider, n8n) và các mô hình AI (Gemini, ChatGPT, Claude Code) vào tối ưu hóa năng suất và hiệu năng quảng cáo.</li>
+                            <li class="lang-en">Pioneered marketing automation tools (Insider, n8n) and AI models (Gemini, ChatGPT, Claude Code) to streamline workflow and improve ad performance.</li>
+
+                            <li class="lang-vi">Phối hợp chặt chẽ với các nhóm chức năng (Design, SEO, Trade, Social, Website) và quản lý đối tác Affiliate Marketing cũng như các bên agency ngoài.</li>
+                            <li class="lang-en">Coordinated closely with multi-functional teams (Design, SEO, Trade, Social, Website) and oversaw Affiliate Marketing partners and external agencies.</li>
+
+                            <li class="lang-vi">Thiết lập hệ thống báo cáo tuần/tháng tự động qua Looker Studio, Power BI và Lark Suite gửi trực tiếp tới Ban lãnh đạo.</li>
+                            <li class="lang-en">Developed automated weekly/monthly dashboards using Looker Studio, Power BI, and Lark Suite to report directly to Board of Directors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020 - 2021</div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title lang-vi">Cộng Tác Viên Marketing</h3>
+                                <h3 class="job-title lang-en">Marketing Collaborator</h3>
+                                <h4 class="job-company"><i class="fa-solid fa-building"></i> VTC Academy</h4>
+                            </div>
+                            <span class="job-badge lang-vi">Cộng tác viên</span>
+                            <span class="job-badge lang-en">Collaborator</span>
+                        </div>
+                        <ul class="job-details">
+                            <li class="lang-vi">Thực hiện nghiên cứu thị trường, khảo sát hành vi khách hàng mục tiêu và phân tích hoạt động của các đối thủ cạnh tranh chính.</li>
+                            <li class="lang-en">Conducted market research, target customer behavior surveys, and analyzed key competitor activities.</li>
+                            
+                            <li class="lang-vi">Hỗ trợ triển khai các chiến dịch Marketing Online bao gồm: chạy quảng cáo sơ cấp, gửi SMS/Email Marketing, seeding nội dung và quản trị Fanpage.</li>
+                            <li class="lang-en">Assisted in executing online campaigns including: initial ad setup, SMS/Email marketing, community seeding, and fanpage management.</li>
+                            
+                            <li class="lang-vi">Theo dõi sát sao hiệu suất chiến dịch, tổng hợp dữ liệu khách hàng, phân loại leads trên hệ thống CRM và đề xuất giải pháp cải thiện Landing Page.</li>
+                            <li class="lang-en">Tracked campaign metrics, compiled customer data, classified leads on CRM systems, and proposed landing page layout improvements.</li>
+
+                            <li class="lang-vi">Lên kế hoạch và trực tiếp hỗ trợ tổ chức các sự kiện tuyển sinh/hội thảo online & offline; liên hệ làm việc với influencer, diễn giả và đối tác truyền thông.</li>
+                            <li class="lang-en">Planned and supported online & offline admission events/webinars; coordinated with influencers, speakers, and external media partners.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education" class="education-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle" data-en="Credentials" data-vi="Học vấn & Chứng chỉ">Học vấn & Chứng chỉ</span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Học Vấn & Chứng Chỉ</span>
+                    <span class="lang-en">Education & Certifications</span>
+                </h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-container education-grid">
+                <!-- Academic -->
+                <div class="education-block">
+                    <h3 class="block-title lang-vi"><i class="fa-solid fa-graduation-cap"></i> Học Vấn Chính Quy</h3>
+                    <h3 class="block-title lang-en"><i class="fa-solid fa-graduation-cap"></i> Academic Education</h3>
+                    
+                    <div class="edu-card">
+                        <span class="edu-year">2017 - 2021</span>
+                        <h4 class="edu-degree lang-vi">Cử nhân Quản trị Kinh doanh (Chuyên ngành Marketing)</h4>
+                        <h4 class="edu-degree lang-en">Bachelor of Business Administration (Marketing Major)</h4>
+                        <p class="edu-school">Trường Đại Học Thăng Long (TLU)</p>
+                        <p class="edu-gpa">Tốt nghiệp năm 2021</p>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="certifications-block">
+                    <h3 class="block-title lang-vi"><i class="fa-solid fa-certificate"></i> Chứng Chỉ Hoàn Thành</h3>
+                    <h3 class="block-title lang-en"><i class="fa-solid fa-certificate"></i> Professional Certificates</h3>
+                    
+                    <div class="cert-grid">
+                        <div class="cert-card">
+                            <i class="fa-brands fa-google cert-brand-icon google-color"></i>
+                            <div>
+                                <h4 class="cert-name">Google Ads Professional Certification</h4>
+                                <p class="cert-org">Google Skillshop</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <i class="fa-brands fa-meta cert-brand-icon meta-color"></i>
+                            <div>
+                                <h4 class="cert-name">Meta Blueprint Certified Professional</h4>
+                                <p class="cert-org">Meta Blueprint</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle" data-en="Case Studies" data-vi="Dự án thực chiến">Dự án thực chiến</span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Chiến Dịch Tiêu Biểu</span>
+                    <span class="lang-en">Featured Campaigns</span>
+                </h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-container projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project1.png" alt="Campaign Dashboard Visual" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-tag">Performance</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name lang-vi">Vận Hành Quảng Cáo Đa Kênh Tích Hợp</h3>
+                        <h3 class="project-name lang-en">Multi-Channel Integrated Performance Campaigns</h3>
+                        
+                        <p class="project-desc lang-vi">
+                            Phân bổ và tối ưu hóa ngân sách lớn trên 8 nền tảng quảng cáo số hàng đầu, đồng bộ hóa mục tiêu phễu từ thu hút lượt truy cập đến thúc đẩy doanh số bán lẻ cuối cùng.
+                        </p>
+                        <p class="project-desc lang-en">
+                            Allocated and optimized high budgets across 8 major digital advertising channels, aligning full-funnel objectives from traffic generation to final retail sales.
+                        </p>
+
+                        <div class="project-metrics">
+                            <span class="metric-item"><i class="fa-solid fa-arrow-up-right-dots"></i> <strong>ROAS:</strong> Up to 70x</span>
+                            <span class="metric-item"><i class="fa-solid fa-tags"></i> <strong>CPA:</strong> -20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project2.png" alt="SEO Traffic Analysis Visual" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-tag">Apple NPI</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name lang-vi">Chiến Dịch Ra Mắt Apple New Product Introduction</h3>
+                        <h3 class="project-name lang-en">Apple NPI Product Launch Campaigns</h3>
+                        
+                        <p class="project-desc lang-vi">
+                            Lên kế hoạch và điều phối chiến dịch ra mắt các dòng iPhone mới đồng loạt trên kênh online và hệ thống chuỗi cửa hàng Hoàng Hà Mobile trên cả nước.
+                        </p>
+                        <p class="project-desc lang-en">
+                            Planned and coordinated national launch campaigns for new iPhone models simultaneously across e-commerce channels and nationwide offline stores.
+                        </p>
+
+                        <div class="project-metrics">
+                            <span class="metric-item"><i class="fa-solid fa-chart-line"></i> <strong>Growth:</strong> +30% YoY</span>
+                            <span class="metric-item"><i class="fa-solid fa-bullseye"></i> <strong>Traffic:</strong> 13M+/mo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project3.png" alt="Automation integration diagram" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-tag">MarTech & AI</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name lang-vi">Tự Động Hóa Vận Hành Bằng n8n & AI Agents</h3>
+                        <h3 class="project-name lang-en">Workflow Automation with n8n & AI Tools</h3>
+                        
+                        <p class="project-desc lang-vi">
+                            Tích hợp n8n với các API quảng cáo và chatbot AI nhằm giám sát hiệu suất tự động, tạo cảnh báo biến động chi phí tức thời và tự động đề xuất phương án tối ưu.
+                        </p>
+                        <p class="project-desc lang-en">
+                            Integrated n8n with ad APIs and AI chatbots for automated performance monitoring, real-time cost fluctuation alerts, and automated optimization suggestions.
+                        </p>
+
+                        <div class="project-metrics">
+                            <span class="metric-item"><i class="fa-solid fa-bolt"></i> <strong>Automation:</strong> n8n & AI</span>
+                            <span class="metric-item"><i class="fa-solid fa-gauge-high"></i> <strong>Efficiency:</strong> High</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle" data-en="Get in touch" data-vi="Kết nối với tôi">Kết nối với tôi</span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Liên Hệ & Hợp Tác</span>
+                    <span class="lang-en">Contact Me</span>
+                </h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-container contact-grid">
+                <div class="contact-info-block">
+                    <h3 class="lang-vi">Bạn đang tìm kiếm một Digital Marketing Leader?</h3>
+                    <h3 class="lang-en">Looking for a Digital Marketing Leader?</h3>
+                    <p class="lang-vi">Hãy gửi thông điệp cho tôi! Tôi luôn sẵn lòng trao đổi về các giải pháp tối ưu hiệu năng quảng cáo, ứng dụng AI/MarTech trong vận hành, hoặc các cơ hội hợp tác nghề nghiệp lâu dài.</p>
+                    <p class="lang-en">Send me a message! I'm always open to discussing performance ad optimization, AI/MarTech workflows, or long-term career partnerships.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="method-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span class="lang-vi">Email trực tiếp</span>
+                                <span class="lang-en">Direct Email</span>
+                                <p>nghialt0801@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="method-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span class="lang-vi">Điện thoại di động</span>
+                                <span class="lang-en">Mobile Phone</span>
+                                <p>0971 393 894</p>
+                            </div>
+                        </div>
+                        <div class="method-card">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <div>
+                                <span class="lang-vi">LinkedIn cá nhân</span>
+                                <span class="lang-en">Professional LinkedIn</span>
+                                <p>linkedin.com/in/nghialt0801</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-block">
+                    <form id="contact-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="form-name" class="lang-vi">Họ & Tên</label>
+                                <label for="form-name" class="lang-en">Your Name</label>
+                                <input type="text" id="form-name" required placeholder="Nguyễn Văn A" data-en-placeholder="John Doe" data-vi-placeholder="Nguyễn Văn A">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" required placeholder="email@example.com" data-en-placeholder="john@example.com" data-vi-placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject" class="lang-vi">Tiêu đề tin nhắn</label>
+                            <label for="form-subject" class="lang-en">Subject</label>
+                            <input type="text" id="form-subject" required placeholder="Hợp tác chiến dịch..." data-en-placeholder="Partnership project..." data-vi-placeholder="Hợp tác chiến dịch...">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message" class="lang-vi">Nội dung chi tiết</label>
+                            <label for="form-message" class="lang-en">Message</label>
+                            <textarea id="form-message" rows="5" required placeholder="Tôi muốn trao đổi về..." data-en-placeholder="Hi Nghia, I'd like to talk about..." data-vi-placeholder="Tôi muốn trao đổi về..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span class="lang-vi"><i class="fa-solid fa-paper-plane"></i> Gửi Tin Nhắn</span>
+                            <span class="lang-en"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                        </button>
+                    </form>
+                    <div id="form-alert" class="form-alert hidden"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="lang-vi">&copy; 2026 Lê Tuấn Nghĩa. Thiết kế chuẩn Performance và tối ưu hóa SEO.</p>
+            <p class="lang-en">&copy; 2026 Le Tuan Nghia. High-Performance & SEO-Optimized Design.</p>
+            <a href="#" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
