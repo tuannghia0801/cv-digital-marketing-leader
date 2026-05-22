@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', theme);
     };
 
-    // Initialize theme
-    setTheme(getPreferredTheme());
+    // Theme init moved to bottom to prevent TDZ issues
 
     themeToggleBtn.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -51,8 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initTypingAnimation(lang);
     };
 
-    // Initialize Language
-    updateTranslations(currentLang);
+    // Language init moved to bottom to prevent TDZ issues
 
     langToggleBtn.addEventListener('click', () => {
         currentLang = currentLang === 'vi' ? 'en' : 'vi';
@@ -72,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const titles = {
         vi: [
             "Digital Marketing Leader",
-            "Chuyên Gia Performance Marketing",
-            "Nhà Quản Trị Tăng Trưởng Dựa Trên Dữ Liệu",
-            "Trưởng Nhóm Chiến Dịch Sáng Tạo"
+            "Performance Marketing Specialist",
+            "Data-Driven Growth Manager",
+            "Creative Campaign Strategist"
         ],
         en: [
             "Digital Marketing Leader",
@@ -217,40 +215,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formAlert = document.getElementById('form-alert');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalBtnContent = submitBtn.innerHTML;
-        
-        // Disable button & show spinner/sending state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = currentLang === 'vi' 
-            ? '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...' 
-            : '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-
-        // Simulate network latency (1.5 seconds)
-        setTimeout(() => {
-            // Clear inputs
-            contactForm.reset();
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
             
-            // Re-enable submit button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnContent;
-
-            // Display success alert
-            formAlert.className = 'form-alert success';
-            formAlert.innerHTML = currentLang === 'vi'
-                ? '<i class="fa-solid fa-circle-check"></i> Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công. Tôi sẽ liên hệ lại sớm nhất.'
-                : '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. I will get back to you shortly.';
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnContent = submitBtn.innerHTML;
             
-            // Hide alert after 5 seconds
+            // Disable button & show spinner/sending state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = currentLang === 'vi' 
+                ? '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...' 
+                : '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            // Simulate network latency (1.5 seconds)
             setTimeout(() => {
-                formAlert.className = 'form-alert hidden';
-            }, 6000);
-            
-        }, 1500);
-    });
+                // Clear inputs
+                contactForm.reset();
+                
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+
+                // Display success alert
+                if (formAlert) {
+                    formAlert.className = 'form-alert success';
+                    formAlert.innerHTML = currentLang === 'vi'
+                        ? '<i class="fa-solid fa-circle-check"></i> Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công. Tôi sẽ liên hệ lại sớm nhất.'
+                        : '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. I will get back to you shortly.';
+                    
+                    // Hide alert after 5 seconds
+                    setTimeout(() => {
+                        formAlert.className = 'form-alert hidden';
+                    }, 6000);
+                }
+                
+            }, 1500);
+        });
+    }
 
     /* ==========================================================================
        PRINT CV / PDF HELPER
@@ -260,4 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Trigger default print command. Custom @media print CSS will format this beautifully to A4.
         window.print();
     });
+
+    // Run initializations after all variables are declared to prevent ReferenceError (Temporal Dead Zone)
+    setTheme(getPreferredTheme());
+    updateTranslations(currentLang);
 });
